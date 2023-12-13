@@ -1,0 +1,445 @@
+@charset "utf-8";
+
+/*
+ * File : style.css
+ * SUMMARY:
+ * 1) Reset
+ * 2) Root
+ * 3) Common
+
+ * 4) Header
+ * 5) Main title
+ * 6) Main text
+ * 7) Main portfolio
+*/
+
+/* ---- Reset ---- */
+
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,img {margin:0; padding:0; font-size: 100%;}
+html {width:100%; height:100%; overflow-y:scroll;overflow-x:hidden;
+    word-break: keep-all; color: 000; font-size: 16px;
+    font-family: 'Poppins','Pretendard', 'Montserrat', "Noto Sans KR", "sans-serif";}
+
+    
+    @font-face {
+        font-family: 'Pretendard';
+        src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400 500 600 700;
+        font-style: normal;
+    }
+
+
+    
+a {text-decoration: none !important;}
+a:link { color: inherit; }
+a:visited { color: inherit; }
+a:active { color: inherit; }
+ul {list-style: none;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+p {margin: 0;}
+
+
+
+
+/* ---- Root ---- */
+
+:root {
+    --by-blue: #235ae2;
+    --by-purple: #9300b7;
+    
+    --lightgray: #ececec;
+    --darkgray: #333;
+    --yellow: #ffe623;
+    --line-color: #d4d4d4;
+    
+    --sub-txt: #767676;
+}
+
+
+
+/* ---- Common ---- */
+
+.bg-lightgray {
+    background-color: var(--lightgray);
+}
+.bg-blue {
+    background-color: var(--by-blue);
+}
+
+
+
+.txt-box h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 70px;
+}
+.txt-box h2 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 48px;
+}
+.txt-box p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 30px;
+}
+
+
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    padding: 10px 20px;
+    margin: 0;
+    margin-right: 30px;
+    background: var(--by-blue);
+    text-align: center;
+    font-weight: 600;
+    transition: 0.4s;
+    border-radius: 46px;
+}
+.btn.bg-purple {
+    background: var(--by-purple);
+}
+.btn:hover {
+    opacity: .8;
+    font-weight: 500;
+}
+.btn p {
+    font-size: 14px !important;
+    color: #fff;
+    margin: 0 !important;
+    font-weight: 600;
+}
+.btn i {
+    font-size: 14px !important;
+    color: #fff;
+}
+
+
+
+/* ---- Header ---- */
+
+header {
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 20px 20px rgb(17 20 39 / 3%);
+}
+
+header #header {
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #header .logo {}
+header #header .logo img {
+    width: 100px;
+}
+
+header #header nav {}
+
+header #header nav ul {}
+
+header #header nav ul li {
+    width: 110px;
+    height: 60px;
+    float: left;
+    text-align: center;
+    line-height: 60px;
+    position: relative;
+    transition: all 0.25s;
+}
+header #header nav ul li:hover {
+    color: var(--by-blue);
+}
+header #header nav ul li .submenu {
+    width: 110px;
+    z-index: 100;
+    position: absolute;
+    display: none;
+}
+header #header nav ul li .submenu li {
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+    transition: all 0.25s;
+}
+header #header nav ul li .submenu li:hover {
+    color: var(--by-purple);
+}
+
+
+
+/* ---- Main title ---- */
+
+.layout-body {
+    width: 100%;
+    padding: 50px 0;
+}
+.layout-body.main-title-bg {
+    background-image: url(../img/main-title-img.png);
+    background-size: cover;
+}
+.layout-body #main-title-wrap {
+    width: 1440px;
+    height: 600px;
+    margin: 0 auto;
+}
+.layout-body #main-title-wrap .txt-box {
+    margin: auto 0;
+    margin-top: 120px;
+}
+.layout-body #main-title-wrap .txt-box p {
+    font-size: 18px;
+}
+
+
+.layout-body #main-title-wrap .txt-box .btn-box {
+    display: flex;
+    margin-top: 100px;
+}
+
+
+
+/* ---- Main text ---- */
+
+.layout-body.main-text-bg {
+    background-color: var(--by-blue);
+    background-image: url(../img/main_text_bg.svg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.layout-body #main-text-wrap {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+.layout-body #main-text-wrap .txt-box {}
+.layout-body #main-text-wrap .txt-box h2 {
+    color: #fff;
+}
+.layout-body #main-text-wrap .txt-box p {
+    color: #fff;
+}
+
+
+
+/* ---- Main potfolio ---- */
+
+.layout-body #main-portfolio-wrap {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout-body #main-portfolio-wrap .txt-box {}
+.layout-body #main-portfolio-wrap .txt-box h2 {}
+.layout-body #main-portfolio-wrap .txt-box p {}
+.layout-body #main-portfolio-wrap .txt-box .btn-box {
+    margin-top: 70px;
+}
+
+
+.layout-body #main-portfolio-wrap .cont-box {}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper {
+    width: 1000px;
+    height: 100%;
+}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-slide {
+    margin-bottom: 20px;
+}
+
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-slide .txt-box {}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-slide .txt-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-slide .txt-box h3 span {
+    font-size: 16px;
+    color: var(--sub-txt);
+}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-slide .txt-box p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 15px;
+}
+
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-pagination-progressbar.swiper-pagination-horizontal {
+    top: auto;
+    bottom: 0;
+    border-radius: 2px;
+}
+.layout-body #main-portfolio-wrap .cont-box .main-ptf-swiper .swiper-pagination-progressbar.swiper-pagination-horizontal .swiper-pagination-progressbar-fill {
+    background: var(--by-purple);
+    border-radius: 2px;
+}
+
+
+
+
+/* ---- Contact Banner ---- */
+
+.layout-body #contact-banner-wrap {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+.layout-body #about-me-wrap {
+    width: 1440px;
+    margin: 0 auto;
+}
+.layout-body #about-me-wrap .prf {
+    display: flex;
+}
+.layout-body #about-me-wrap .prf .cont-title {
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 25px;
+}
+.layout-body #about-me-wrap .prf .cont-title::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: #4dc3c3;
+    transform: rotate(-45deg);
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+
+
+
+/* ---- Fixed Banner ---- */
+
+.fixed-banner {
+    z-index: 1000;
+}
+
+.gototop {
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	right: 25px;
+	top: 850px;
+	bottom: 30px;
+    color: #333;
+	background: #fff;
+	box-shadow: 0 20px 40px rgb(17 20 39 / 10%);
+    z-index: 1000;
+}
+.gototop a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gototop a:hover {
+    color: var(--by-purple);
+}
+
+
+
+
+
+/* ---- Footer ---- */
+
+footer {
+    width: 100%;
+    padding: 80px 0 50px;
+    box-shadow: 0 20px 20px rgb(17 20 39 / 3%);
+    background-color: var(--darkgray);
+}
+
+footer #footer {
+    width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+footer #footer .txt-box {}
+footer #footer .txt-box p {
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+}
+footer #footer .txt-box p span {
+    margin: 0 10px;
+}
+
+footer #footer .cont-box {}
+footer #footer .cont-box nav {
+    float: right;
+}
+footer #footer .cont-box nav ul {
+    display: flex;
+    justify-content: end;
+}
+footer #footer .cont-box nav ul li {
+    padding: 0 10px;
+}
+footer #footer .cont-box nav ul li:last-child {
+    padding-right: 0;
+}
+footer #footer .cont-box nav ul li a {
+    color: #fff;
+    font-size: 20px;
+}
+footer #footer .cont-box h1 {
+    text-align: right;
+    margin-top: 65px;
+}
+footer #footer .cont-box h1 img {
+    width: 150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
