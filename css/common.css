@@ -27,6 +27,7 @@ a {
   cursor: pointer;
   font-family: "Poppins", "Pretendard", Arial, sans-serif;
   color: var(--20241029-black);
+  text-decoration: none;
 }
 
 .pcView {
