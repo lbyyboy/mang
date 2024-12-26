@@ -1,0 +1,13 @@
+footer {
+  width: 100vw;
+  margin-top: 80px;
+}
+footer .inner {
+  margin-bottom: 0;
+  border-top: 1px solid var(--dark-color);
+}
+footer .copy {
+  padding: 30px 0 50px;
+  text-align: center;
+  color: var(--dark-color);
+}
