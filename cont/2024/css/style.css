@@ -263,6 +263,9 @@ section#main .inner .txt_box h2 {
 .modal .result .result_box .sib_box li p .name {
   color: var(--mang-yellow);
 }
+.modal .result .result_box .sib_box li p .bar {
+  margin: 0 10px;
+}
 
 .modal .result .result_close {
   display: block;
