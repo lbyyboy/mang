@@ -3,7 +3,7 @@ footer {
   margin-top: 80px;
 }
 footer .inner {
-  margin-bottom: 0;
+  padding: 0;
   border-top: 1px solid var(--dark-color);
 }
 footer .copy {

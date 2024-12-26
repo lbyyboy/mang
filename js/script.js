@@ -1,54 +1,23 @@
 $(document).ready(function () {
-  /* ----submenu---- */
-  $(".nav li").mouseover(function () {
-    $(this).children(".submenu").stop().slideDown();
-  });
-  $(".nav li").mouseleave(function () {
-    $(this).children(".submenu").stop().slideUp();
-  });
+  var countDownDate = new Date('December 27, 2024 21:00:00').getTime();
 
-  /* offcanvas */
-  $(".ham").click(function () {
-    $(".offcanvas").show();
-    return false;
-  });
+  var x = setInterval(function () {
+    var now = new Date().getTime();
 
-  $(".off_close").click(function () {
-    $(".offcanvas").hide();
-  });
+    var distance = countDownDate - now;
 
-  $(".off_nav li a").click(function () {
-    $(this).siblings(".off_nav li .submenu").slideToggle();
-    return false;
-  });
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  /*result*/
-  $(".result_btn").click(function () {
-    $(this).siblings(".modal").show();
-    return false;
-  });
-  $(".result_close").click(function () {
-    $(this).parent().parent(".modal").hide();
-    return false;
-  });
-
-  /*confetti*/
-  $('.result_btn').on('click', function() {
-    // 시작점으로 설정할 요소 가져오기
-    const canvas = $('.result_btn')[0];
-    
-    // Canvas 요소의 위치 정보를 가져오기
-    const canvasRect = canvas.getBoundingClientRect();
-    
-    // Canvas Confetti 라이브러리를 사용하여 효과 적용
-    confetti({
-        particleCount: 100,
-        spread: 180,
-        origin: {
-          y: 0.6 
-        },
-        zIndex: 9999,
-    });
-});
-
+    document.getElementById("days").innerText = days,
+    document.getElementById("hours").innerText = hours,
+    document.getElementById("minutes").innerText = minutes,
+    document.getElementById("seconds").innerText = seconds;
+    if (distance < 0) {
+      document.getElementById('section01').style.display = 'none',
+      document.getElementById('section02').style.display = 'block';
+    }
+  }, 1000);
 });
